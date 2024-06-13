@@ -6,8 +6,7 @@ from Full_rna import *
 from time import *
 import matplotlib.pyplot as plt
 
-#t_run=2.0
-t_run=1.0
+t_run=0.5
 dt=0.0025*ms
 v_initial=-70*mV
 v_set = 10*mv 
@@ -110,9 +109,8 @@ def llog(x):
     return llog
 
 cs_duration=100*ms
-
-cs_times=[245*ms, 960*ms, 1600*ms, 2150*ms, 2800*ms, 3400*ms, 4000*ms, 5500*ms, 6600*ms, 7000*ms]
-#cs_times=[480*ms, 920*ms, 1600*ms, 2150*ms, 2800*ms, 3400*ms, 4000*ms, 5500*ms, 46500*ms, 6600*ms, 7000*ms]
+cs_times = []
+# cs_times=[245*ms, 750*ms, 1000*ms, 1500*ms]
 
 
 # time_file=open("time_file",'r')
@@ -176,11 +174,11 @@ cf_synapse=DoubleExponentialSynapse(tau_rise,tau_decay)
 #current_file=open("current_file",'r')
 #current_value=float(current_file.readline().strip())
 #print current_value
-cf_a=[90*uA]*len(cs_times)
+# cf_a=[90*uA]*len(cs_times)
 
-# cf_a=[]
-# for i in range(0,len(cs_times)+1):
-#     cf_a.append(np.random.randint(40,60)*uA)
+cf_a=[]
+for i in range(0,len(cs_times)+1):
+    cf_a.append(np.random.randint(80,120)*uA)
 
 
 

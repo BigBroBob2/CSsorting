@@ -176,43 +176,45 @@ while integrator.successful() and integrator.t < t1:
 
 
 
-file_name = 'data_2017_08_11_4ch/'
-utc_datetime = datetime.datetime.utcnow()
-formated_string = utc_datetime.strftime("%Y-%m-%d-%H%MZ")
+# file_name = 'data_2017_08_11_4ch/'
+# utc_datetime = datetime.datetime.utcnow()
+# formated_string = utc_datetime.strftime("%Y-%m-%d-%H%MZ")
 
-parameter_file_in=open("Parameters_2017_08_03.py",'r')
-parameter_file=parameter_file_in.read()
-parameter_file_in.close()
-parameter_file_out=open(file_name+formated_string+"_parameter_file.txt",'w')
-parameter_file_out.write(parameter_file)
-parameter_file_out.close()
+# parameter_file_in=open("Parameters_2017_08_03.py",'r')
+# parameter_file=parameter_file_in.read()
+# parameter_file_in.close()
+# parameter_file_out=open(file_name+formated_string+"_parameter_file.txt",'w')
+# parameter_file_out.write(parameter_file)
+# parameter_file_out.close()
 
-parameter_file_out=open(file_name+formated_string+"_parameter_file_rnd.txt",'w')
-parameter_file_out.write("g_rna,g_k,v_r,full_rna_epsilon,background_current\n")
-parameter_file_out.write(str(g_rna)+"\n")
-parameter_file_out.write(str(g_k)+"\n")
-parameter_file_out.write(str(v_r)+"\n")
-parameter_file_out.write(str(full_rna_epsilon)+"\n")
-parameter_file_out.write(str(background_current)+"\n")
-parameter_file_out.close()
+# parameter_file_out=open(file_name+formated_string+"_parameter_file_rnd.txt",'w')
+# parameter_file_out.write("g_rna,g_k,v_r,full_rna_epsilon,background_current\n")
+# parameter_file_out.write(str(g_rna)+"\n")
+# parameter_file_out.write(str(g_k)+"\n")
+# parameter_file_out.write(str(v_r)+"\n")
+# parameter_file_out.write(str(full_rna_epsilon)+"\n")
+# parameter_file_out.write(str(background_current)+"\n")
+# parameter_file_out.close()
 
-np.savetxt(file_name+formated_string+'_climbing_fibre_input_times.dat', cs_times)
-np.savetxt(file_name+formated_string+'_climbing_fibre_input_amplitudes.dat', cf_a)
-np.savetxt(file_name+formated_string+'_parallel_fibre_input_times.dat', ss_times)
-np.savetxt(file_name+formated_string+'_interneuron_input_times.dat', in_times)
+# np.savetxt(file_name+formated_string+'_climbing_fibre_input_times.dat', cs_times)
+# np.savetxt(file_name+formated_string+'_climbing_fibre_input_amplitudes.dat', cf_a)
+# np.savetxt(file_name+formated_string+'_parallel_fibre_input_times.dat', ss_times)
+# np.savetxt(file_name+formated_string+'_interneuron_input_times.dat', in_times)
 
-np.savetxt(file_name+formated_string+'_rna_current_trace.dat',i_rna_trace)
-np.savetxt(file_name+formated_string+'_leak_current_trace.dat',i_leak_trace)
+# np.savetxt(file_name+formated_string+'_rna_current_trace.dat',i_rna_trace)
+# np.savetxt(file_name+formated_string+'_leak_current_trace.dat',i_leak_trace)
 
-np.savetxt(file_name+formated_string+'_rna_current_trace.dat',i_rna_trace)
-np.savetxt(file_name+formated_string+'_k_current_trace.dat',i_k_trace)
-np.savetxt(file_name+formated_string+'_leak_current_trace.dat',i_leak_trace)
+# np.savetxt(file_name+formated_string+'_rna_current_trace.dat',i_rna_trace)
+# np.savetxt(file_name+formated_string+'_k_current_trace.dat',i_k_trace)
+# np.savetxt(file_name+formated_string+'_leak_current_trace.dat',i_leak_trace)
 
 plt.plot(time_base, voltage_trace)
 plt.title('voltage trace')
 
-file_type = '_voltage_trace'
-image_filename1 = file_name+formated_string+file_type+'.jpg' 
+# file_type = '_voltage_trace'
+# image_filename1 = file_name+formated_string+file_type+'.jpg' 
 
-plt.savefig(image_filename1)
+# plt.savefig(image_filename1)
 #plt.show()
+
+print('Done!')
